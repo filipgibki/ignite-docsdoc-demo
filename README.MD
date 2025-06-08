@@ -41,8 +41,8 @@ uv run mkdocs serve
 
 
 Testing philosophy:
-- Repo will contain carefully crafted commit
+- Repo will contain carefully crafted commits
 - Each commit will be a ne version of the app with added or changed features
-- Each commit will contain a "baseline" end-user documentation that we will try to update with DocsDock
+- Each commit will contain a "baseline" end-user documentation that we will try to update with DocsDoc
 
 This approach ensures that we can evaluate different approaches to updating the documentation using the same "input data".

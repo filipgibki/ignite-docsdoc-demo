@@ -1,0 +1,23 @@
+site_name: Ignite Todo App
+site_description: A progressive todo list application built with React and Material-UI
+
+nav:
+  - Home: index.md
+  - User Guide:
+    - Getting Started: user-guide/getting-started.md
+    - Using the App: user-guide/using-the-app.md
+  - Versions:
+    - Version 1 (Current): versions/v1.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true 
