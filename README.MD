@@ -28,10 +28,10 @@ Running the documentation generator:
     - Python
     - uv
     - Netskope set for python (https://appfireteam.atlassian.net/wiki/spaces/help/pages/96244793910/HOWTO+Work+with+Netskope+SSL+interception)
-    - SSL flag set for uv - 'export UV_NATIVE_TLS=true && source $HOME/.local/bin/env'
+    - SSL flag set for uv - 'export UV_NATIVE_TLS=true' >> ~/.zshrc && source ~/.zshrc'
 
 # Initiate the virtual environment
-cd docs
+cd docs/end-user
 uv venv
 uv sync
 

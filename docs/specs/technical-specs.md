@@ -59,3 +59,25 @@ ignite-todo/
 * Component files and their corresponding functions must be named using **PascalCase** (e.g., `DataGrid.tsx`, `function DataGrid()`).
 * All other files (hooks, utils, services) and variables/functions within them must be named using **camelCase** (e.g., `useAuth.ts`, `const apiService = ...`).
 * Write clean, readable code with meaningful names. Keep functions short and focused on a single responsibility.
+
+## **Testing & Selectors**
+
+To ensure our application is robust and maintainable, it is crucial to write tests that are resilient to changes in the UI, such as text labels or DOM structure.
+
+### **Best Practices for Selectors**
+
+*   **Prioritize `data-testid`**: For end-to-end (E2E) and integration tests, always use `data-testid` attributes to select elements. This decouples tests from implementation details.
+*   **Avoid brittle selectors**: Do not rely on CSS class names, tag names, or text content for selectors in tests, as these are prone to frequent changes.
+*   **Applying to MUI Components**: For simple Material-UI components like `Button` or `ListItem`, apply the `data-testid` prop directly. For components that wrap an input element, such as `TextField` or `Checkbox`, you should also apply the `data-testid` prop directly to the component. In more complex components with multiple distinct parts, use the `slotProps` prop to target specific internal elements (slots) when necessary.
+
+### **`data-testid` Naming Convention**
+
+Use a consistent and descriptive naming convention for `data-testid` attributes to make them easy to identify and understand.
+
+*   **Format**: `[component-name]-[element-description]` or `[page-name]-[component-name]-[element-description]`
+*   **Examples**:
+    *   `add-task-form-input`: The input field for adding a new task.
+    *   `task-list`: The list containing all task items.
+    *   `task-item-label-1`: The label for the task item with id 1.
+    *   `task-item-checkbox-1`: The checkbox for the task item with id 1.
+    *   `task-item-delete-button-1`: The delete button for the task item with id 1.
